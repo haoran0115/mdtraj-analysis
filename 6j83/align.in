@@ -1,0 +1,7 @@
+parm ./6j83_solv.prmtop          # input amber topology file
+trajin 6j83_mdtraj.nc            # input trajectory
+center :394                      # center the trajectory wrt to which part
+                                 # residue 394 in this case
+image                            # map all residues back to the periodic box
+align :1-392                     # align all frames wrt to which part
+trajout ./6j83_mdtraj_aligned.nc # specify output filename
